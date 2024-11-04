@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    color: black;
+}
+
+body {
+    background-color: #800020;
+}
+
+.inria-sans-light {
+    font-family: "Inria Sans", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.inria-sans-regular {
+    font-family: "Inria Sans", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.inria-sans-bold {
+    font-family: "Inria Sans", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.title {
+    padding: 25px 0px;
+    font-size: 70px;
+}
+
+.main-section {
+    gap: 50px;
+}
+
+.card {
+    background-color: transparent;
+    width: 400px;
+    height: 450px;
+    perspective: 1000px;
+}
+
+.card-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .card-content {
+    transform: rotateY(180deg);
+}
+
+.front-card, .back-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.front-card {
+    border-radius: 20px;
+    background-color: #D4AF37;
+}
+
+.back-card {
+    border-radius: 20px;
+    background-color: #FFFFF0;
+    transform: rotateY(180deg);
+}
+
+img {
+    width: 230px;
+    height: 230px;
+    border-radius: 20px;
+}
+
+.card-content > div > p {
+    padding: 0px 30px;
+}
+
+.location::before {
+    content: url(../Assets/region-pin-alt.png) "  ";
+    margin-right: 5px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.build-year::before {
+    content: url(../Assets/daily-calendar.png) "  ";
+    margin-right: 5px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.time-period::before {
+    content: url(../Assets/duration-alt.png) "  ";
+    margin-right: 5px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.title::before {
+    content: url(../Assets/chart-pyramid.png) "  ";
+    margin-right: 5px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.title::after {
+    content: url(../Assets/chart-pyramid.png) "  ";
+    margin-left: 5px;
+    display: inline-block;
+    vertical-align: middle;
+}
